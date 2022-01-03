@@ -1,0 +1,30 @@
+Virtual Environment Creation at command prompt
+	py -3 -m venv venv
+	venv\Scripts\activate.bat
+	
+Install fastapi package:
+	pip install fastapi[all]
+	
+show packages installed
+	pip freeze
+
+command to run live server:
+	uvicorn main:app --reload
+
+automatic documentation
+	swagger UI: http://127.0.0.1:8000/docs
+	redoc: http://127.0.0.1:8000/redoc
+	
+postgres
+	superuser's password: password
+	port: 5432
+	we will be using pgAdmin 4 to manage the databases
+	
+if you put ** before a python dictionary, it unpacks it so you can use all of them as arguments in a function:
+	dict = {'title': 'top beaches in florida', 'content': 'check out these awesome beaches', 'published': False}
+	**dict = 'title': 'top beaches in florida', 'content': 'check out these awesome beaches', 'published': False
+	
+https://youtu.be/0sOvCWFmrtA
+7:36:17 Test Expired Token
+
+jwt.io
