@@ -28,3 +28,44 @@ https://youtu.be/0sOvCWFmrtA
 7:36:17 Test Expired Token
 
 jwt.io
+
+Python Libraries
+ - fastapi: easy apis with python
+ - pydantic: impose data types
+ - sqlalchemy: interact with database
+ - alembic: database migration tool
+ 
+alembic
+	inside the (venv) command line, type:
+	alembic init --help
+	alembic init alembic  # creates alembic directory
+	
+	alembic revision --help
+	alembic revision -m "create posts table"  # "commits" change and creates file within /versions. 
+	# We need to define the upgrade and downgrade the funcions. We must do this according to the documentation under https://alembic.sqlalchemy.org/en/latest/api/ddl.html
+	
+	alembic upgrade d1da4814ce19
+	# or
+	alembic upgrade head
+	
+	# type this in order for alembic to automatically interpret the database model from the models.py file:
+	alembic revision --autogenerate -m "auto generate the database"
+	
+CORS
+	we want to allow CORS, we look how to do it in the fastapi documentation
+	
+git
+	exclude venv folder, but we want to specify the packages that we need as well as their specific versions
+	type:
+	pip freeze > requirements.txt
+	
+	then, we can just type:
+	pip install -r requirements.txt
+
+github
+	# type on raw terminal, not (venv) the following:
+	git init
+	git add --all
+	git commit -m "initial commit"
+	git branch -M main
+	git remote add origin https://github.com/jcortinaf/fastapi-course.git
