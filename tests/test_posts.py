@@ -113,4 +113,4 @@ def test_update_post_non_exist(authorized_client, test_user, test_posts):
         "id": test_posts[3].id
     }
     resp = authorized_client.put('/posts/88888', json=data)
-    assert resp.status_code == 404
+    assert resp.status_code == 401  # changed this to cause error in CI/CD pipeline
