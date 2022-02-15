@@ -3,5 +3,6 @@
         "dbname",
         "psycopg",
         "pydantic"
-    ]
+    ],
+    "python.defaultInterpreterPath": "venv\\Scripts\\python.exe"
 }
